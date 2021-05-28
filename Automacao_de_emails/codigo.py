@@ -1,17 +1,13 @@
 import pandas as pd
-
-
 import docx
+
 from docx import Document
 from docx.shared import Inches, Cm, Pt, Length
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from datetime import date
 
 
-
 df = pd.read_excel('random_data.xlsx')  # ler planilha de dados
-#print("Escreva o número da O.C.")
-#merc_ref = [input()] # recebe o numero de referência da mercadoria
 
 i = df[df.columns[0]].count()   - 1
 
@@ -59,6 +55,5 @@ while i >= 0:
     paragraph_format.line_spacing = Pt(12)
     paragraph = document.add_paragraph('Vert TECH')   #espaçamento de 12 pt
     
-    print(i)
     document.save(cliente_nome + '_email.docx') #salvar documento
     i-=1
