@@ -5,8 +5,11 @@ import comtypes.client
 
 import winsound
 
+#Informar as pastas de entrada e de saída
 pastain = input("informe o endereço da pasta com os arquivos docx:")
 pastaout = input("informe o endereço da pasta para salvar os arquivo em pdf:")
+
+
 lista_arquivos = glob.glob(pastain + r"\*.docx")
 print("Aguarde, convertendo arquivos ...")
 for i in range(0, len(lista_arquivos)):
